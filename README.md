@@ -1,6 +1,6 @@
 # CW07 - Dígito verificador de rol UTFSM
 
-Se agregó la carpeta `CW07` con el programa `cw07.py`, que calcula el dígito verificador de un rol UTFSM.
+Se agregó la carpeta `Classwork-07-Digit-Verification` con el programa `cw07.py`, que calcula el dígito verificador de un rol UTFSM.
 
 El programa realiza los siguientes pasos:
 
