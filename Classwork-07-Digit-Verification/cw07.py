@@ -23,5 +23,4 @@ modulo = suma % 11
 # Restarlo de 11
 digito_verificador = 11 - modulo
 
-# Mostrar el resultado final
 print(f"{rol}-{digito_verificador}")
