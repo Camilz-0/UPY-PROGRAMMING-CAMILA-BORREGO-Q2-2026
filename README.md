@@ -21,7 +21,7 @@ Ejemplo de uso:
 ```text
 Ingrese el rol UTFSM (sin guion ni digito verificador): 201012341
 El digito verificador sera el obtenido en la resta: 201012341-3  
-
+```
 
 ---
 
@@ -43,3 +43,4 @@ Enter the right interval limit (b): pi
 Enter the function in terms of x (e.g., x**2): x**2
 Select calculation method (LRM, RRM, MRM): MRM
 The integration of x**2 using MRM is: 10.3354
+```
