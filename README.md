@@ -44,3 +44,32 @@ Enter the function in terms of x (e.g., x**2): x**2
 Select calculation method (LRM, RRM, MRM): MRM
 The integration of x**2 using MRM is: 10.3354
 ```
+
+---
+
+## CW09 - Spanish Verb Conjugator
+
+Se agregó la carpeta `Classwork-09-Spanish-Verb-Conjugator` que contiene la lógica para la conjugación automática de verbos.
+
+### Archivos incluidos:
+* **`PPP.txt`:** Pseudocódigo que detalla la lógica de separación de raíces y terminaciones verbales.
+* **`Flowchart.png`:** Diagrama de flujo detallando el proceso de conjugación y decisiones.
+* **`spanish_verb_conjugator.py`:** Programa que utiliza diccionarios para organizar los datos y generar las conjugaciones.
+
+Ejemplo de uso:
+
+```text
+Write a spanish verb (ar/er/ir): hablar
+yo hablo
+tu hablas
+el habla
+nosotros hablamos
+vosotros hablais
+ellos hablan
+```
+
+---
+
+## Declaración de Autoría
+
+Yo, **`Camila Berenice Borrego Ayala`**, declaro que este trabajo fue desarrollado de forma personal y original por su autora. Afirmo que **NO** he utilizado herramientas de Inteligencia Artificial para la generación de la lógica, documentación o entregables incluidos en este proyecto.
