@@ -47,7 +47,7 @@ The integration of x**2 using MRM is: 10.3354
 
 ---
 
-## CW09 - Spanish Verb Conjugator
+# CW09 - Spanish Verb Conjugator
 
 Se agregó la carpeta `Classwork-09-Spanish-Verb-Conjugator` que contiene la lógica para la conjugación automática de verbos.
 
@@ -70,7 +70,7 @@ ellos hablan
 
 ---
 
-## CW10 - School Management System
+# CW10 - School Management System
 
 Se agregó la carpeta `Classwork-10-School-Management-System` que contiene el simulador de un sistema de gestión escolar con tres niveles de acceso (estudiante, profesor y coordinador).
 
