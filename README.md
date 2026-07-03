@@ -100,6 +100,36 @@ Pending : set()
 
 ---
 
+# CW11 - The Mandelbrot Set
+
+Se agregó la carpeta `Classwork-11-The Mandelbrot Set` que contiene un script para generar visualizaciones del conjunto de Mandelbrot basado en parámetros de configuración.
+
+### Archivos incluidos:
+
+* **`PPP.txt`**: Pseudocódigo que detalla la lógica de iteración de números complejos y el escape del módulo.
+
+* **`Flowchart.png`**: Diagrama que ilustra el proceso del algoritmo para determinar si un número pertenece al conjunto de Mandelbrot o cuántas iteraciones tarda en "escapar".
+
+* **`mandelbrot_set_math.py`**: Código con el programa principal que lee los parámetros desde config.txt y exporta los resultados de las iteraciones a un archivo mandelbrot.csv.
+
+### Ejemplo de uso:
+
+```
+# Contenido de config.txt
+ancho=800
+alto=600
+max_iter=100
+real_min=-2.0
+real_max=1.0
+imag_min=-1.2
+imag_max=1.2
+
+# El programa generará un archivo mandelbrot.csv con:
+# fila,columna,iteraciones
+```
+
+---
+
 ## Declaración de Autoría
 
 Yo, **`Camila Berenice Borrego Ayala`**, declaro que este trabajo fue desarrollado de forma personal y original por su autora. Afirmo que **NO** he utilizado herramientas de Inteligencia Artificial para la generación de la lógica, documentación o entregables incluidos en este proyecto.
