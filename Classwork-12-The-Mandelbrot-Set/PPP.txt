@@ -1,0 +1,47 @@
+# INPUT
+Open "config.txt" for reading
+Read all lines from configuration file
+Close configuration file
+
+Create empty dictionary config
+
+For each line in configuration lines
+    Remove whitespace and split line by "=" into parameter and value
+    If "." is in value Then
+        Convert value to float
+    Else
+        Convert value to integer
+    EndIf
+    Store value in config under key parameter
+EndFor
+
+Set max_iter ← config["max_iter"]
+Set ancho ← config["ancho"]
+Set alto ← config["alto"]
+
+Open "mandelbrot.csv" for reading
+Read all lines from CSV file
+Close CSV file
+
+Set datos ← lines from index 1 to end # Skip the header row
+
+# PROCESS & OUTPUT
+Create new image img with mode 'L' and dimensions (ancho, alto)
+
+For each line in datos
+    Remove whitespace and split line by "," into fila, columna, iteraciones
+    Convert fila to integer
+    Convert columna to integer
+    Convert iteraciones to integer
+    
+    If iteraciones equals max_iter Then
+        Set brillo ← 0 # Inside the set is black
+    Else
+        Set brillo ← integer of ((iteraciones / max_iter) * 255)
+    EndIf
+    
+    Put pixel in img at coordinates (columna, fila) with value brillo
+EndFor
+
+Save img as "mandelbrot.png"
+Print "DONE"
