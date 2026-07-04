@@ -127,6 +127,30 @@ imag_max=1.2
 # El programa generará un archivo mandelbrot.csv con:
 # fila,columna,iteraciones
 ```
+---
+
+# CW12 - The Mandelbrot Set (Visualizer)
+
+Se agregó la carpeta `Classwork-12-The-Mandelbrot-Set` que contiene el script necesario para convertir los datos calculados en una imagen visual del conjunto.
+
+### Archivos incluidos:
+
+* **`PPP.txt`**: Pseudocódigo que detalla la lógica de mapeo de iteraciones a niveles de brillo (escala de grises) para la imagen.
+
+* **`Flowchart.png`**: Diagrama que ilustra el proceso de lectura del archivo CSV y la creación de la imagen resultante.
+
+* **`mandelbrot_visualizer`**.py: Código encargado de procesar mandelbrot.csv y generar el archivo mandelbrot.png utilizando la librería PIL.
+
+### Ejemplo de uso:
+
+```
+# Ejecución del visualizador:
+- Asegurarse de tener mandelbrot.csv y config.txt en la misma carpeta.
+python mandelbrot_set_vis.py
+
+# Resultado:
+- El programa generará un archivo mandelbrot.png con la representación visual del conjunto.
+```
 
 ---
 
