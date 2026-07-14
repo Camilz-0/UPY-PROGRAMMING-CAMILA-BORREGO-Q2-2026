@@ -1,4 +1,3 @@
-# Obtener el rol del usuario como texto
 rol = input("Ingrese el rol UTFSM: ")
 
 if "-" not in rol or rol.count("-") != 1:
