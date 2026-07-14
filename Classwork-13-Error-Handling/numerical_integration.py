@@ -1,33 +1,52 @@
-# Numerical Integration Tool
 import math
 
-# INPUT
-a = input("Enter the left interval limit (a): ")
-b = input("Enter the right interval limit (b): ")
-f_x = input("Enter the function in terms of x (e.g., x**2): ")
-method = input("Select calculation method (LRM, RRM, MRM): ").upper()
+try:
+    a_input = input("Límite izquierdo (a): ")
+    b_input = input("Límite derecho (b): ")
+    f_x = input("Función (ej. x**2): ")
+    method = input("Método (LRM, RRM, MPM, TM): ").upper()
 
-a = float(eval(a.replace("pi", str(math.pi))))
-b = float(eval(b.replace("pi", str(math.pi))))
+    try:
+        a = float(eval(a_input.replace("pi", str(math.pi))))
+    except:
+        raise ValueError("El límite inferior debe ser numérico")
 
-# PROCESS
-n = 1000
-h = (b - a) / n
-area = 0.0
+    try:
+        b = float(eval(b_input.replace("pi", str(math.pi))))
+    except:
+        raise ValueError("El límite superior debe ser numérico")
 
-if method == "LRM":
-    offset = 0.0
-elif method == "RRM":
-    offset = h
-elif method == "MRM":
-    offset = h / 2.0
-else:
-    offset = 0.0
+    if a >= b:
+        raise ValueError("El límite inferior debe ser menor que el límite superior")
 
-for i in range(n):
-    xi = a + (i * h) + offset
-    height = float(eval(f_x.replace("x", f"({xi})")))
-    area += height * h
+    if method not in ["LRM", "RRM", "MPM", "TM"]:
+        raise ValueError("El método de integración no es válido. Usa LRM, RRM, MPM o TM")
 
-# OUTPUT
-print(f"The integration of {f_x} using {method} is: {area:.4f}")
+    n = 1000
+    h = (b - a) / n
+    area = 0.0
+
+    if method == "LRM": offset = 0.0
+    elif method == "RRM": offset = h
+    elif method == "MPM": offset = h / 2.0
+    else: offset = 0.0
+
+    for i in range(n):
+        xi = a + (i * h) + offset
+        
+        try:
+            valor_funcion = f_x.replace("x", f"({xi})")
+            height = float(eval(valor_funcion))
+        except ZeroDivisionError:
+            raise ValueError("La función no está definida en algún punto del intervalo")
+        except:
+            raise ValueError("La función ingresada no es válida")
+        
+        area += height * h
+
+    print(f"The integration of {f_x} is {area:.3f}")
+
+except ValueError as e:
+    print(f"{e}")
+except Exception:
+    print("Ocurrió un error inesperado al procesar la función")

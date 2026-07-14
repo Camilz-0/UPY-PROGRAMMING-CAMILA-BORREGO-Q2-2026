@@ -1,5 +1,4 @@
-# Required Structures
-pronouns = ['yo', 'tu', 'el', 'nosotros', 'vosotros', 'ellos']
+pronouns = ['Yo', 'Tú', 'Él', 'Nosotros', 'Vosotros', 'Ellos']
 
 endings = {
     'ar': ['o', 'as', 'a', 'amos', 'ais', 'an'],
@@ -7,18 +6,19 @@ endings = {
     'ir': ['o', 'es', 'e', 'imos', 'is', 'en']
 }
 
-# INPUT
-verb = input("Write a spanish verb (ar/er/ir): ")
+try:
+    verb = input("Write a spanish verb (ar/er/ir): ").strip().lower()
 
-# PROCESS
-# Get the stem 
-stem = verb[:-2]
-# Get the ending 
-ending = verb[-2:]
+    if len(verb) < 3 or verb[-2:] not in endings:
+        raise ValueError
 
-conjugations = endings[ending]
+    stem = verb[:-2]
+    ending = verb[-2:]
+    conjugations = endings[ending]
 
-# OUTPUT
-for index, pronoun in enumerate(pronouns):
-    termination = conjugations[index]
-    print(f"{pronoun} {stem}{termination}")
+    for index, pronoun in enumerate(pronouns):
+        termination = conjugations[index]
+        print(f"{pronoun} {stem}{termination}")
+
+except:
+    print("El verbo debe terminar en ar, er o ir")
