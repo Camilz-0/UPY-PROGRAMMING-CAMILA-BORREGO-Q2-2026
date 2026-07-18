@@ -1,0 +1,41 @@
+1   # INPUT
+2   Generate a list of 10 random integers between 0 and 100
+3   Print "Before bubble sort:" and the numbers list
+4   
+5   # PROCESS
+6   Configure canvas scales (X-scale from -0.1 to 10, Y-scale from -0.5 to max(numbers) + 1)
+7   Store the length of the list in variable "n"
+8   
+9   FOR EACH sweep from 0 to n - 1:
+10      FOR EACH pair from 0 to n - 1 - sweep:
+11          
+12          # Draw bars BEFORE the swap
+13          Clear canvas
+14          Calculate bar_width = 10.0 / n
+15          FOR EACH index and number in the list:
+16              Calculate X position on the canvas
+17              IF index is one of the selected numbers:
+18                  Set color to Red (255, 90, 90)
+19              ELSE:
+20                  Set color to Blue (70, 130, 220)
+21              Draw filled rectangle using the current number
+22          Show canvas with animation delay (500ms)
+23          
+24          # Conditional Swap
+25          IF current number is greater than the next number:
+26              Swap the positions of both numbers
+27              
+28              # Draw bars AFTER the swap
+29              Clear canvas
+30              FOR EACH index and number in the list:
+31                  Calculate X position on the canvas
+32                  IF index is one of the selected numbers:
+33                      Set color to Red (255, 90, 90)
+34                  ELSE:
+35                      Set color to Blue (70, 130, 220)
+36                  Draw filled rectangle using the current number
+37              Show canvas with animation delay (500ms)
+38              
+39  # OUTPUT
+40  Clear canvas and draw the final sorted bars (all in blue)
+41  Show the final static canvas
